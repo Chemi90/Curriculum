@@ -1,0 +1,256 @@
+/* Estilos básicos y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #2C3E50; /* Fondo gris oscuro */
+    color: #ECF0F1; /* Color de letra claro para contraste */
+    margin: 30px 350px; /* Margen a los lados */
+    padding: 20px; /* Espacio interior para el contenido */
+    border-radius: 20px;
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.5), /* Sombra para efecto de profundidad */
+        0 0 0 10px #34495E; /* Borde externo más oscuro */
+}
+
+/* Estilo general del contenedor */
+.container {
+    background-color: #ECF0F1; /* Color de fondo interior más claro */
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.2), /* Sombra para efecto de elevación */
+        0 0 0 5px #BDC3C7; /* Borde interior más claro */
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.5), /* Sombra para efecto de profundidad */
+        0 0 0 10px #34495E; /* Borde externo más oscuro */
+        border-radius: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+#sobre-mi {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#sobre-mi h1 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+#sobre-mi .bio-container {
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Alinea verticalmente */
+}
+
+#sobre-mi img {
+    width: 200px; /* Ancho fijo para la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 50%; /* Hace la imagen redonda */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+}
+
+#sobre-mi p {
+    margin: 0; /* Remueve el margen por defecto del párrafo */
+    flex-grow: 1; /* El párrafo ocupa el espacio restante */
+}
+
+/* Sección de proyectos */
+.proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Contenedor de cada video y su descripción */
+.proyecto .video-container {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.proyecto video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.proyecto .descripcion {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navegación y enlaces */
+nav ul li a, a {
+    text-decoration: none;
+    color: #3498DB; /* Color azul claro para enlaces normales */
+    font-weight: bold;
+}
+
+/* Cambiar el color de los enlaces al pasar el cursor */
+nav ul li a:hover, a:hover {
+    color: #2980B9; /* Color azul un poco más oscuro para hover */
+}
+
+/* Cambiar el color de los enlaces una vez visitados */
+nav ul li a:visited, a:visited {
+    color: #9B59B6; /* Color púrpura para enlaces visitados */
+}
+
+/* Footer con enlaces */
+footer a {
+    color: #ECF0F1; /* Color de letra claro para el footer */
+}
+
+footer a:hover {
+    color: #BDC3C7; /* Color más claro para hover en el footer */
+}
+
+/* Visualización Tablet */
+@media (max-width: 1024px) {
+    body {
+        margin: 30px 20px; /* Reducimos los márgenes para aprovechar mejor el espacio */
+        padding: 10px; /* Ajustamos el padding */
+    }
+
+    header {
+        padding: 10px 0; /* Ajuste para el padding del encabezado */
+    }
+
+    nav ul {
+        display: grid; /* Cambiamos a grid para el layout del menú */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+        grid-gap: 35px; /* Espacio entre elementos del grid */
+    }
+
+    nav ul li {
+        text-align: center; /* Alinea el texto al centro de la celda del grid */
+    }
+
+    nav ul li a {
+        display: block; /* Hace que el enlace llene la celda del grid */
+        padding: 10px; /* Espacio alrededor del texto para mejorar la táctilidad */
+        font-size: 1.2em; /* Aumentamos el tamaño para facilitar la navegación táctil */
+    }
+
+    #sobre-mi .bio-container {
+        flex-direction: column; /* Organizamos la imagen y el texto en columna */
+        align-items: flex-start; /* Alineamos los elementos al inicio */
+    }
+
+    #sobre-mi img {
+        margin-right: 0; /* Eliminamos el margen derecho */
+        margin-bottom: 10px; /* Añadimos margen inferior para separar de texto */
+        width: 200px; /* Ajustamos el tamaño de la imagen a uno más adecuado para tablets */
+    }
+
+    .proyecto .video-container {
+        width: 100%; /* Ajustamos los videos para que ocupen el ancho completo */
+    }
+
+    /* Resto de tus estilos... */
+}
+
+/* Visualización Smartphone */
+@media (max-width: 480px) {
+    body {
+        margin: 20px 20px;
+        padding: 5px;
+        box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.5), /* Sombra para efecto de profundidad */
+        0 0 0 5px #34495E; /* Borde externo más oscuro */
+    }
+
+    header {
+        padding: 10px 0; /* Ajuste para el padding del encabezado */
+    }
+
+    nav ul {
+        display: grid; /* Usa grid para la disposición */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+        grid-gap: 10px; /* Espacio entre elementos del grid */
+    }
+
+    nav ul li {
+        text-align: center; /* Alinea el texto al centro */
+        box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.5), /* Sombra para efecto de profundidad */
+        0 0 0 4px #34495E; /* Borde externo más oscuro */
+        border-radius: 10px;
+    }
+
+    nav ul li a {
+        display: block; /* Hace que el enlace llene la celda del grid */
+        padding: 7px; /* Espacio alrededor del texto para mejorar la táctilidad */
+        font-size: 1em; /* Ajusta el tamaño de la fuente */
+    }
+
+    #sobre-mi .bio-container, .proyecto .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre-mi img {
+        margin: 0 0 10px 0;
+        width: 120px;
+    }
+
+    #sobre-mi p, .proyecto .descripcion {
+        text-align: center;
+    }
+
+    .proyecto .video-container {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
